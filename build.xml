@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Project101" default="init" basedir=".">
+	<description>
+    	sample ant build to prepare project layout
+    </description>
+
+	<property file="ant.properties" />
+
+	<path id="project.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${src.dir}/${package}" />
+		<mkdir dir="${test.dir}/${package}" />
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${lib.dir}" />
+	</target>
+</project>
